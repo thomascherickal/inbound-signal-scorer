@@ -2,8 +2,8 @@ const fs = require('fs');
 const util = require('util');
 const path = require('path');
 
-const localHtmlPath = path.join(__dirname, 'inbound-readiness-scorer.html');
-const fallbackHtmlPath = '/home/thomas/Digital Products/Patreon/RECRUITED Digital Products/inbound-readiness-scorer.html';
+const localHtmlPath = path.join(__dirname, 'index.html');
+const fallbackHtmlPath = path.join(__dirname, 'inbound-readiness-scorer.html');
 const htmlPath = fs.existsSync(localHtmlPath) ? localHtmlPath : fallbackHtmlPath;
 console.log("Loading HTML...");
 let content = fs.readFileSync(htmlPath, 'utf8');
@@ -60,21 +60,20 @@ const ACTIONS_DATABASE = {
     '3-4': [
       {
         id: 'linkedin_creator_mode',
-        title: 'Activate Creator Mode on your profile',
-        why: 'Enables follow mechanics, newsletter features, and lets you display up to 5 custom topic hashtags on your bio.',
+        title: 'Set your primary CTA to Follow & configure Creator Tools',
+        why: 'Switches your profile from passive connection requests to audience growth while unlocking Featured links and Newsletter distribution.',
         steps: [
-          'Navigate to your LinkedIn Profile page.',
-          'Scroll down to the "Resources" section.',
-          'Click "Creator Mode" (currently showing Off).',
-          'Select 5 topic hashtags that define your professional niche, and toggle the mode to ON.'
+          'Open LinkedIn Settings & Privacy → Visibility → Followers.',
+          'Toggle "Make follow primary" to ON so visitors see Follow instead of Connect.',
+          'Return to your Profile and add a custom Featured link (portfolio or lead magnet).',
+          'Update your "Talks about" / niche keywords in your Headline and About section.'
         ],
         integration: {
-          platform: 'LinkedIn Creator Mode',
+          platform: 'LinkedIn Profile & Creator Settings',
           steps: [
-            'Go to linkedin.com/in/[username] → Scroll to Resources.',
-            'Click Creator Mode → Next.',
-            'Add 5 specific tags (e.g. #platformengineering, #kubernetes, #cloudnative).',
-            'Turn on. Your profile primary button will shift from "Connect" to "Follow".'
+            'Go to linkedin.com/mypreferences/d/settings/followers → Toggle "Make follow primary" ON.',
+            'Open linkedin.com/in/[username] → Add section → Recommended → Add Featured.',
+            'Pin your core portfolio link, flagship post, or newsletter signup.'
           ]
         },
         impact: 2.5,
@@ -154,7 +153,7 @@ const ACTIONS_DATABASE = {
         title: 'Enable LinkedIn Newsletter and publish your first edition',
         why: 'Newsletters trigger in-app and email notifications to all your connections, compounding reach organically.',
         steps: [
-          'Verify Creator Mode is active.',
+          'Ensure your profile meets LinkedIn Newsletter eligibility (150+ followers/connections and recent activity).',
           'Click "Write an article" at your home feed header.',
           'Click "Create a newsletter" inside the editor settings.',
           'Publish your first monthly edition outlining a contrarian niche lesson.'
@@ -491,8 +490,8 @@ const ACTIONS_DATABASE = {
         title: 'Configure a Google AI Studio system prompt for interview prep',
         why: 'AI Studio provides zero-latency access to Gemini models with direct system prompt settings for hyper-realistic mock interviews.',
         steps: [
-          'Open google.ai.studio in your browser.',
-          'Select Gemini 1.5 Pro or newer model.',
+          'Open aistudio.google.com in your browser.',
+          'Select the latest Gemini Pro or Flash model (e.g., Gemini 2.5 Pro or newer).',
           'In the System Instruction panel, input a role-playing prompt mapping a target hiring manager persona.',
           'Initiate a chat session to practice technical mock screening.'
         ],
@@ -685,7 +684,7 @@ const ACTIONS_DATABASE = {
         title: 'Start a weekly niche newsletter on LinkedIn',
         why: 'LinkedIn Newsletter subscribers receive direct email alerts on each publication, compounding reach.',
         steps: [
-          'Activate the newsletter feature inside Creator Mode.',
+          'Open the LinkedIn article editor and select "Create a newsletter".',
           'Establish a catchy title (e.g., "[Niche] Scaling Secrets") and upload a premium thumbnail.',
           'Commit to publishing exactly one 500-word niche editorial every Tuesday morning.'
         ],

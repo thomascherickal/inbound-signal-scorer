@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 
-const localHtmlPath = path.join(__dirname, 'inbound-readiness-scorer.html');
-const fallbackHtmlPath = '/home/thomas/Digital Products/Patreon/RECRUITED Digital Products/inbound-readiness-scorer.html';
+const localHtmlPath = path.join(__dirname, 'index.html');
+const fallbackHtmlPath = path.join(__dirname, 'inbound-readiness-scorer.html');
 const htmlPath = fs.existsSync(localHtmlPath) ? localHtmlPath : fallbackHtmlPath;
 
 console.log("Loading HTML from:", htmlPath);
