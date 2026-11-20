@@ -312,14 +312,16 @@ console.log("   ✅ Pass: Simulated Content Copilot 100-word viral explanations 
 
 // Test 13: LinkedIn URL Validation omitted since LinkedIn URL entry is deprecated.
 
-// Test 14: 24-Role Expert System coverage verification
-console.log("Running Test 14: 24-Role Expert System Coverage...");
+// Test 14: 30-Role Expert System coverage verification
+console.log("Running Test 14: 30-Role Expert System Coverage...");
 const expectedRoles = [
   "AI/ML Engineer", "Cloud Architect", "Data Scientist", "DevOps Engineer", "Full-Stack Developer", 
   "Cybersecurity Engineer", "Product Manager", "Solutions Architect", "Data Engineer", "UX/UI Designer", 
   "Engineering Manager", "Prompt/LLM Engineer", "Content Writer/Strategist", "Technical Writer", "Book Author", 
   "AI Graphic Designer", "AI Artist", "AI Musician", "Project Manager", "Sales Professional", 
-  "Marketing Manager", "HR Manager", "Financial Analyst", "Customer Success Manager"
+  "Marketing Manager", "HR Manager", "Financial Analyst", "Customer Success Manager",
+  "AI Agent Engineer", "AI Product Manager", "MLOps / LLMOps Engineer",
+  "AI Safety & Governance Specialist", "Platform Engineer", "Forward-Deployed Engineer (FDE)"
 ];
 expectedRoles.forEach(role => {
   const profile = sandbox.ROLE_EXPERT_SYSTEM[role];
@@ -342,7 +344,7 @@ expectedRoles.forEach(role => {
   assert(profile.retrieved && Array.isArray(profile.retrieved) && profile.retrieved.length >= 2, `Role "${role}" must define custom crawled retrieved posts list`);
   assert(profile.suggested && Array.isArray(profile.suggested) && profile.suggested.length === 10, `Role "${role}" must suggest exactly 10 roadmapped post articles`);
 });
-console.log(`   ✅ Pass: Fully validated all 24 book roles are present with complete strategy schemas`);
+console.log(`   ✅ Pass: Fully validated all 30 roles are present with complete strategy schemas`);
 
 // Test 15: Exact 50-line procedural summary length verification
 console.log("Running Test 15: 50-Line Summary Plan Length verification...");

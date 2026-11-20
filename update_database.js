@@ -188,7 +188,7 @@ const ACTIONS_DATABASE = {
           steps: [
             'Create a document titled "My Personal Niche Definition".',
             'Write down 5 niche candidates at the overlap of expertise and market demand.',
-            'Validate against the RECRUITED anti-generic filter rules.'
+            'Validate against the anti-generic filter rules.'
           ]
         },
         impact: 4,
@@ -221,7 +221,7 @@ const ACTIONS_DATABASE = {
         title: 'Audit cross-platform brand consistency',
         why: 'Disjointed positioning across channels signals instability to background recruiters.',
         steps: [
-          'Open all professional accounts: LinkedIn, GitHub, Twitter/X, Dev.to.',
+          'Open all professional accounts: LinkedIn, GitHub, X, Dev.to.',
           'Verify that your profile photo, headline, and bio are aligned across all directories.',
           'Apply the exact same target positioning phrase to all active channel bios.'
         ],
@@ -287,7 +287,7 @@ const ACTIONS_DATABASE = {
         title: 'Create and document your signature methodology',
         why: 'Having a proprietary framework places you at the pinnacle of domain authority and sets high pricing power.',
         steps: [
-          'Synthesize your core execution flow into a 3-step or 4-step named framework (e.g. The RECRUITED Pipeline).',
+          'Synthesize your core execution flow into a 3-step or 4-step named framework (e.g. The Inbound Pipeline).',
           'Draft an infographic or simple visual diagram illustrating the flow.',
           'Publish a detailed guide explaining how this framework saves target employers time or capital.'
         ],
@@ -704,18 +704,18 @@ const ACTIONS_DATABASE = {
       {
         id: 'content_cross_syndication',
         title: 'Establish a cross-platform content syndication engine',
-        why: 'Broaden your organic reach by distributing your articles across LinkedIn, Hashnode, Dev.to, and Twitter/X simultaneously.',
+        why: 'Broaden your organic reach by distributing your articles across LinkedIn, Hashnode, Dev.to, and X simultaneously.',
         steps: [
           'Write your weekly long-form technical article.',
           'Import it to Dev.to and Hashnode using canonical links to protect original SEO ranking.',
-          'Post short hook summaries on Twitter/X and LinkedIn directing readers to the main article.'
+          'Post short hook summaries on X and LinkedIn directing readers to the main article.'
         ],
         integration: {
           platform: 'Cross-platform Channels',
           steps: [
             'Publish originally on your custom portfolio site.',
             'Syndicate to dev.to and hashnode using canonical URL setting matching your site link.',
-            'Create a 5-post thread on Twitter/X outlining the article\'s core takeaways.'
+            'Create a 5-post thread on X outlining the article\'s core takeaways.'
           ]
         },
         impact: 2,
